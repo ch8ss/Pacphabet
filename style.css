@@ -1,0 +1,30 @@
+body {
+    background-color: black;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.hidden {
+    display: none;
+}
+
+#start-screen {
+    text-align: center;
+}
+
+#letter-input {
+    padding: 10px;
+    
+}
+
+.board {
+    width: 600px;
+    height: 600px;
+    background-color: purple;
+    box-shadow: 30px;
+    border-style: groove;
+    border-radius: 10px;
+}
