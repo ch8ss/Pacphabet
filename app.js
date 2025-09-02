@@ -6,7 +6,6 @@ const nameInput   = document.getElementById("name-input");
 const startScreen = document.getElementById("start-screen");
 const gameScreen  = document.getElementById("game-screen");
 const randomBtn   = document.getElementById("random-letter");
-
 const canvas = document.getElementById("game");
 const ctx    = canvas.getContext("2d");
 
@@ -784,9 +783,11 @@ function initGame(letter) {
 // =========================
 /* Reviews (Supabase) */
 // =========================
-const SUPABASE_URL  = "https://YOUR_PROJECT_ID.supabase.co";  // <-- REPLACE
-const SUPABASE_ANON = "YOUR_PUBLIC_ANON_KEY";                  // <-- REPLACE
+const SUPABASE_URL = "https://ovwlkwsnxqrqfrgznxsk.supabase.co";
+const SUPABASE_ANON = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im92d2xrd3NueHFycWZyZ3pueHNrIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTY4MjMwMTMsImV4cCI6MjA3MjM5OTAxM30.16Qy_kc1RR70l-Dk2Mmo67p0WlNj9OpWkrwWeboT4mI"; 
+
 const sb = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON);
+
 
 // DOM for reviews
 const form      = document.getElementById("review-form");
