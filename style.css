@@ -4,43 +4,70 @@ html, body {
 }
 
 body {
-    background-color: black;
-    margin: 0;
-    display: grid;
-    font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
-    place-items: center;
+  background-color: black;
+  margin: 0;
+  display: grid;
+  place-items: center;
+
+  /* add these lines */
+  font-family: "Pixelify Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
 }
+
+.game-title {
+  text-align: center;
+  color: #c6ff4d;   /* matches your green accents */
+  font-size: 32px;
+  margin: 10px 0 20px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
 
 .hidden {
     display: none;
 }
 
+
+.pixelify-sans-heading {
+  font-family: "Pixelify Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700; /* bold */
+  font-style: normal;
+}
+
+.pixelify-sans-normal {
+  font-family: "Pixelify Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400; /* regular */
+  font-style: normal;
+}
+
+
 #letter-input {
+  font-family: "Pixelify Sans", sans-serif;   /* add this */
+  font-optical-sizing: auto;
+  font-weight: 700; /* or 400/500 etc. */
   padding: 10px 15px;
   font-size: 18px;
   text-align: center;
   border-radius: 8px;
-  border: 3px groove #aaff00; /* groove style border */
-  background-color: #c6ff4d;  /* light green */
+  border: 3px groove #aaff00;
+  background-color: #c6ff4d;
   color: black;
-  outline: none;              /* remove default blue outline */
-  font-weight: bold;
+  outline: none;
 }
+
 
 
 .board {
-    width: 600px;
-    height: 600px;
-    background-color: purple;
-    box-shadow: 30px;
-    border-style: groove;
-    border-radius: 10px;
-}
-
-.pacman {
-    width: 40px;
-    height: 40px;
-    background-color: yellow;
-    border-radius: 50%;
-    clip-path: polygon(0% 0%, 100% 50%, 0% 100%, 0% 0% );
+  position: relative;           /* so children can absolutely position */
+  width: 600px;
+  height: 600px;
+  background: #7e2d86;          /* same purple but a hair darker */
+  border-radius: 16px;
+  border: 3px groove #d9d9d9;
+  box-shadow: 0 14px 36px rgba(0,0,0,.45);  /* your old '30px' wasn't valid */
+  overflow: hidden;             /* keep children inside */
 }

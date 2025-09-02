@@ -1,29 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pacphabet</title>
-    <link rel="stylesheet"href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pacphabet</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
 </head>
 <body>
-
-    <div id="start-screen">
+  <!-- Start Screen -->
+  <div id="start-screen">
     <input type="text" id="letter-input" maxlength="1" placeholder="Enter An Alphabet" autofocus>
-    <p class="note">Type a letter between A-Z</p>
-    </div>
-    <div id="game-screen" class="hidden">
+    <p class="note">Type a letter between A–Z</p>
+  </div>
+
+  <!-- Game Screen -->
+  <div id="game-screen" class="hidden">
+    <h1 class="game-title">Pacphabet – By Chetss</h1>
     <div class="board">
-
+      <canvas id="game" width="600" height="600"></canvas>
     </div>
-    
-    <div class="pacman">
-        
-    </div>
+  </div>
 
-    </div>
-
-    <script src="app.js"></script>
-    
+  <script src="app.js"></script>
 </body>
 </html>
