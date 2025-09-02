@@ -10,13 +10,43 @@
   <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <!-- Start Screen -->
-  <div id="start-screen">
-    <input type="text" id="letter-input" maxlength="1" placeholder="Enter An Alphabet" autofocus>
-    <p class="note">Type a letter between A–Z</p>
-  </div>
 
-  <!-- Game Screen -->
+  <div id="start-screen">
+  <input id="name-input"  type="text" placeholder="Your name">
+  <input id="letter-input" type="text" maxlength="1" placeholder="Enter An Alphabet">
+  <button id="random-letter" class="pixel-button">Random Letter</button>
+  <p class="note">Type your name, then a letter A–Z and press Enter</p>
+</div>
+
+<section id="reviews" class="reviews">
+  <h2 class="game-title">Player Reviews</h2>
+
+  <form id="review-form" autocomplete="off">
+    <div class="review-row">
+      <input id="review-name" type="text" placeholder="Your name" maxlength="40" class="pixel-input-like" required>
+      <select id="review-rating" class="pixel-input-like" required>
+        <option value="" disabled selected>Rating ⭐</option>
+        <option value="5">5 — GOATED</option>
+        <option value="4">4 — Fire</option>
+        <option value="3">3 — Nice</option>
+        <option value="2">2 — Meh</option>
+        <option value="1">1 — Bruh</option>
+      </select>
+    </div>
+
+    <textarea id="review-comment" rows="3" placeholder="Write your thoughts (max 500 chars)" maxlength="500" class="pixel-input-like" required></textarea>
+
+    <button type="submit" id="review-submit" class="pixel-button">Submit Review ✅</button>
+    <span id="review-status" class="review-status"></span>
+  </form>
+
+  <div id="reviews-list" class="reviews-list"></div>
+</section>
+
+<!-- Supabase JS (browser) -->
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+<!-- Game Screen -->
   <div id="game-screen" class="hidden">
     <h1 class="game-title">Pacphabet – By Chetss</h1>
     <div class="board">
