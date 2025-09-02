@@ -1,5 +1,6 @@
 /* Center whatever is visible */
-html, body {
+html,
+body {
   height: 100%;
 }
 
@@ -9,7 +10,7 @@ body {
   display: grid;
   place-items: center;
 
-  /* add these lines */
+  /* font setup */
   font-family: "Pixelify Sans", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
@@ -17,18 +18,16 @@ body {
 
 .game-title {
   text-align: center;
-  color: #c6ff4d;   /* matches your green accents */
+  color: #c6ff4d; /* matches your green accents */
   font-size: 32px;
   margin: 10px 0 20px;
   font-weight: bold;
   letter-spacing: 1px;
 }
 
-
 .hidden {
-    display: none;
+  display: none;
 }
-
 
 .pixelify-sans-heading {
   font-family: "Pixelify Sans", sans-serif;
@@ -44,9 +43,8 @@ body {
   font-style: normal;
 }
 
-
 #letter-input {
-  font-family: "Pixelify Sans", sans-serif;   /* add this */
+  font-family: "Pixelify Sans", sans-serif;
   font-optical-sizing: auto;
   font-weight: 700; /* or 400/500 etc. */
   padding: 10px 15px;
@@ -59,15 +57,143 @@ body {
   outline: none;
 }
 
+/* make the name box look the same */
+#name-input {
+  font-family: "Pixelify Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  padding: 10px 15px;
+  font-size: 18px;
+  text-align: center;
+  border-radius: 8px;
+  border: 3px groove #aaff00;
+  background-color: #c6ff4d;
+  color: black;
+  outline: none;
+}
+
+/* match the neon input vibe */
+.pixel-button {
+  font-family: "Pixelify Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  padding: 10px 15px;
+  font-size: 18px;
+  text-align: center;
+  border-radius: 8px;
+  background-color: #ff4dff;
+  color: black;
+  outline: none;
+  cursor: pointer;
+}
+
+.pixel-button:hover {
+  filter: brightness(1.05);
+}
+
+.pixel-button:active {
+  transform: translateY(1px);
+}
 
 
 .board {
-  position: relative;           /* so children can absolutely position */
+  position: relative; /* so children can absolutely position */
   width: 600px;
   height: 600px;
-  background: #7e2d86;          /* same purple but a hair darker */
+  background: #7e2d86; /* same purple but a hair darker */
   border-radius: 16px;
   border: 3px groove #d9d9d9;
-  box-shadow: 0 14px 36px rgba(0,0,0,.45);  /* your old '30px' wasn't valid */
-  overflow: hidden;             /* keep children inside */
+  box-shadow: 0 14px 36px rgba(0, 0, 0, 0.45); /* your old '30px' wasn't valid */
+  overflow: hidden; /* keep children inside */
 }
+
+/* Make review inputs match your letter/name fields */
+.pixel-input-like,
+#reviews select,
+#reviews textarea {
+  font-family: "Pixelify Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  padding: 10px 15px;
+  font-size: 18px;
+  text-align: left;
+  border-radius: 8px;
+  border: 3px groove #aaff00;
+  background-color: #c6ff4d;
+  color: black;
+  outline: none;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.reviews {
+  width: min(720px, 92vw);
+  margin: 18px auto 32px;
+}
+
+.review-row {
+  display: grid;
+  grid-template-columns: 1fr 180px;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+#review-comment {
+  resize: vertical;
+  min-height: 84px;
+  margin-bottom: 10px;
+}
+
+.pixel-button {
+  font-family: "Pixelify Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  padding: 10px 15px;
+  font-size: 18px;
+  text-align: center;
+  border-radius: 8px;
+  border: 3px groove #aaff00;
+  background-color: #c6ff4d;
+  color: black;
+  outline: none;
+  cursor: pointer;
+}
+
+.pixel-button:hover { filter: brightness(1.05); }
+.pixel-button:active { transform: translateY(1px); }
+
+.reviews-list {
+  margin-top: 18px;
+  display: grid;
+  gap: 12px;
+}
+
+.review-card {
+  background: #111;
+  color: #c6ff4d;
+  border: 3px groove #d9d9d9;
+  border-radius: 12px;
+  padding: 12px 14px;
+  box-shadow: 0 8px 18px rgba(0,0,0,.35);
+}
+
+.review-card .meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  opacity: 0.9;
+  margin-bottom: 6px;
+}
+
+.review-card .comment {
+  white-space: pre-wrap;
+  line-height: 1.35;
+}
+
+.review-status {
+  margin-left: 10px;
+  font-size: 14px;
+  color: #c6ff4d;
+  opacity: .9;
+}
+
